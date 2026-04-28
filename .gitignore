@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Local builds (not used now, here for safety)
+node_modules/
+dist/
+.env
+.env.local
