@@ -914,6 +914,103 @@ footer.site-footer {
   background: linear-gradient(90deg, transparent, var(--sky), transparent);
 }
 
+/* =====================================================
+   Mobile — tablet (≤ 768px) & phone (≤ 480px)
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* Section spacing */
+  section                { padding: 56px 0; }
+  .hero                  { padding: 64px 0 72px; min-height: auto; }
+  .page-header           { padding: 80px 0 52px; }
+  footer.site-footer     { padding: 48px 0 24px; }
+  .cta-band              { padding: 48px 0; }
+
+  /* Section heads */
+  .section-head,
+  .section-head.center   { margin-bottom: 32px; }
+
+  /* Feature cards — keep 2 col on tablet */
+  .features              { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .feature               { padding: 22px 18px; }
+
+  /* Package cards — remove scale so nothing clips */
+  .package.featured      { transform: none; }
+  .package.featured:hover { transform: translateY(-4px); }
+  .package               { padding: 28px 22px; }
+
+  /* CTA band — stack text + buttons centrally */
+  .cta-band .wrap        { flex-direction: column; text-align: center; align-items: center; }
+  .cta-band .hero-cta    { justify-content: center; }
+
+  /* Gallery rows a little shorter */
+  .gallery               { grid-auto-rows: 130px; gap: 10px; margin-top: 32px; }
+
+  /* Menu & info cards */
+  .menu-group            { padding: 22px 18px; }
+  .info-card             { padding: 20px 16px; }
+
+  /* Hero stats tighter */
+  .hero-stats            { gap: 12px; margin-top: 40px; }
+  .hero-stats strong     { font-size: 32px; }
+
+  /* Split section inline-style overrides */
+  .split                 { gap: 32px; }
+
+  /* Panel art — shorter on tablet */
+  .panel-art             { aspect-ratio: 16/9; }
+
+  /* Footer colophon stack */
+  .colophon              { flex-direction: column; text-align: center; gap: 4px; margin-top: 36px; }
+
+  /* Nav brand */
+  .brand-words strong    { font-size: 19px; }
+}
+
+@media (max-width: 480px) {
+
+  /* Tighter spacing on small phones */
+  section                { padding: 44px 0; }
+  .hero                  { padding: 52px 0 60px; }
+  .page-header           { padding: 64px 0 40px; }
+  .cta-band              { padding: 40px 0; }
+
+  /* Features — single column */
+  .features              { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Buttons — full-width stack */
+  .hero-cta              { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn         { width: 100%; justify-content: center; text-align: center; }
+
+  /* Gallery — single column */
+  .gallery               { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .gallery figure        { grid-column: span 1 !important; grid-row: span 1 !important; }
+
+  /* Hero stats — 2 col already set, just tighten */
+  .hero-stats            { gap: 10px; }
+  .hero-stats strong     { font-size: 28px; }
+
+  /* Package price font */
+  .package .price        { font-size: 42px; }
+
+  /* FAQ summary smaller */
+  .faq summary           { font-size: 15px; }
+
+  /* Form full width */
+  form.contact-form      { max-width: 100%; }
+
+  /* Footer */
+  footer.site-footer     { padding: 40px 0 20px; }
+
+  /* Brand */
+  .brand-words strong    { font-size: 17px; }
+  .brand-words span      { letter-spacing: 0.2em; }
+
+  /* Topbar smaller */
+  .topbar                { font-size: 11px; padding: 7px 10px; }
+}
+
 /* animations */
 @keyframes roll-in {
   from { opacity: 0; transform: translateY(20px); }
